@@ -22,3 +22,14 @@ After joining these tables, we built a transactional dataset with the following 
 - `OrderID`, `ProductID`, `OrderDate`, `OrderTotal`, `Product Name`
 
 ---
+
+## 🔧 Tools & Technologies
+
+- **Python**
+  - `pandas`, `numpy`, `matplotlib`, `seaborn`
+  - `scikit-learn` for clustering and evaluation
+  - `pyodbc` for SQL connection
+- **SQL Server** for raw data storage
+- **Jupyter Notebook** for analysis
+
+---
