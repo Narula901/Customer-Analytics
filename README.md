@@ -33,3 +33,45 @@ After joining these tables, we built a transactional dataset with the following 
 - **Jupyter Notebook** for analysis
 
 ---
+## 🧠 Project Workflow
+
+### 1. Data Extraction
+- Connected to SQL Server and imported relevant tables.
+
+### 2. Data Cleaning & Preprocessing
+- Merged datasets
+- Parsed date fields
+- Handled data types and duplicates
+
+### 3. Feature Engineering (RFM Analysis)
+- **Recency**: Days since last purchase
+- **Frequency**: Total number of transactions
+- **Monetary**: Total purchase value
+
+### 4. Exploratory Data Analysis (EDA)
+- Visualized relationships between R, F, and M.
+- Found strong correlations:
+  - High frequency → high monetary value
+  - High recency → low frequency
+
+---
+
+## 🔁 5. Clustering (KMeans & DBSCAN)
+
+- Applied **KMeans Clustering**:
+  - Standardized RFM values using `StandardScaler`.
+  - Used **Elbow Method** and **Silhouette Score** to determine the optimal number of clusters (`k = 4`).
+  - Successfully segmented customers into distinct groups based on behavioral patterns.
+
+- Applied **DBSCAN Clustering**:
+  - Used density-based clustering to identify non-linear cluster shapes and outliers.
+  - Tuned `eps` and `min_samples` parameters.
+  - Compared DBSCAN results with KMeans using **Silhouette Score**.
+
+- **Result**: 
+  - KMeans produced more meaningful and well-separated customer clusters based on the business context.
+  - DBSCAN identified noise points and dense clusters but required careful parameter tuning and gave mixed results.
+
+- Visualizations included to compare cluster structures for both methods.
+
+---
