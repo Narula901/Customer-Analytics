@@ -10,3 +10,15 @@ Businesses often treat all customers the same, which can lead to missed opportun
 
 ---
 
+## 📂 Data Source
+
+- Extracted from Microsoft SQL Server database `BikeStores`.
+- Tables used:
+  - `Sales.OrderItem`
+  - `Sales.Order`
+  - `Production.Product`
+
+After joining these tables, we built a transactional dataset with the following key fields:
+- `OrderID`, `ProductID`, `OrderDate`, `OrderTotal`, `Product Name`
+
+---
